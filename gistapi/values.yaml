@@ -1,0 +1,23 @@
+replicaCount: 2
+
+image:
+  repository: your-docker-repo/fastapi-gist
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: nexus-secret
+  
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+
+ingress:
+  enabled: true
+  className: nginx
+  host: fastapi.local
+  path: /
+  pathType: Prefix
+
+resources: {}
