@@ -1,8 +1,8 @@
 replicaCount: 2
 
 image:
-  repository: your-docker-repo/fastapi-gist
-  tag: latest
+  repository: localhost:8085/codeexperts
+  tag: 70
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
