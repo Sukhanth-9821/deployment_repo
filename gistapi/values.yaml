@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository:  172.17.0.1:8085/codeexperts
+  repository:  nexus:8085/codeexperts
   tag: 70
   pullPolicy: IfNotPresent
 
