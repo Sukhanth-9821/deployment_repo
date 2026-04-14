@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository:  172.19.0.5:8085/codeexperts
+  repository:  host.minikube.internal:8085/codeexperts
   tag: 70
   pullPolicy: IfNotPresent
 
