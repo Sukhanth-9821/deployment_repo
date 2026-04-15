@@ -1,7 +1,7 @@
 pipeline{
     agent any
     parameters {
-        string(name: "Image Version", defaultValue: "70", description: "Enter Image Tag:")
+        string(name: "IMAGE_TAG", defaultValue: "70", description: "Enter Image Tag:")
     }
     environment{
         GIT_REPO = "https:///${gituser}:${gitpasswd}@github.com/Sukhanth-9821/deployment_repo.git"
