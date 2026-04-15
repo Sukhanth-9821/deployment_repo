@@ -30,6 +30,8 @@ pipeline{
 
             sh """ 
 
+            git config user.email "sukhanthwhitehat@gmail.com"
+            git config user.name "sukhanth"
             git add ${FILE_PATH} 
             git commit -m "Update image tag to ${params.IMAGE_TAG}" || echo "No changes to commit" 
             git push "https:///${gituser}:${gitpasswd}@github.com/Sukhanth-9821/deployment_repo.git" ${BRANCH} 
