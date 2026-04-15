@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    parameter{
+    parameters {
         string(name: "Image Version", defaultValue: "70", description: "Enter Image Tag:")
     }
     environment{
