@@ -17,7 +17,7 @@ pipeline{
         }
         stage ("Update Version"){
             steps{
-                sh """ sed -i 's/tag: .*/tag: ${IMAGE_TAG}/g' ${FILE_PATH} 
+                sh """ sed -i 's/tag: .*/tag: ${params.IMAGE_TAG}/g' ${FILE_PATH} 
                 cat ${FILE_PATH} 
                 """
             }
@@ -31,7 +31,7 @@ pipeline{
             sh """ 
 
             git add ${FILE_PATH} 
-            git commit -m "Update image tag to ${IMAGE_TAG}" || echo "No changes to commit" 
+            git commit -m "Update image tag to ${params.IMAGE_TAG}" || echo "No changes to commit" 
             git push "https:///${gituser}:${gitpasswd}@github.com/Sukhanth-9821/deployment_repo.git" ${BRANCH} 
             
             """
