@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository:  host.minikube.internal:8085/codeexperts
-  tag: 79
+  tag: 70
   pullPolicy: Always
 
 
